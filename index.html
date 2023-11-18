@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        h1 {
+            color: #D5F2F2;
+            font-family: Arial;
+        }
+
+        .calculator {
+            text-align: center;
+            width: 300px;
+            height: 350px;
+            border-radius: 10px;
+            margin: auto;
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #F3D7D7;
+            padding: 5px;
+        }
+
+        .buttons {
+            text-align: center;
+            width: 275px;
+            margin: 10px auto;
+        }
+
+        .button {
+            float: left;
+            height: 40px;
+            width: 68px;
+            cursor: pointer;
+        }
+
+        .textbox {
+            margin: 10px 0px 5px 0px;
+            text-align: right;
+            width: 275px;
+            height: 25px;
+            margin: 10px auto;
+        }
+    </style>
+</head>
+<body bgcolor="#D5F2F2">
+    <div class="calculator" name="Calculator">
+        <h1>Calculator</h1>
+        <input type="text" name="Input" id="textbox" class="textbox" readonly>
+        <div class="buttons">
+            <button class="button" id="clear" onclick="clearDisplay()">AC</button>
+            <button class="button" id="CE" onclick="backspace()">&#9003;</button>
+            <button class="button" id="moduls" onclick="append('%')">%</button>
+            <button class="button" id="double" onclick="append('/')">/</button>
+            <button class="button" id="7" onclick="append('7')">7</button>
+            <button class="button" id="8" onclick="append('8')">8</button>
+            <button class="button" id="9" onclick="append('9')">9</button>
+            <button class="button" id="mul" onclick="append('*')">*</button>
+            <button class="button" id="4" onclick="append('4')">4</button>
+            <button class="button" id="5" onclick="append('5')">5</button>
+            <button class="button" id="6" onclick="append('6')">6</button>
+            <button class="button" id="minus" onclick="append('-')">-</button>
+            <button class="button" id="1" onclick="append('1')">1</button>
+            <button class="button" id="2" onclick="append('2')">2</button>
+            <button class="button" id="3" onclick="append('3')">3</button>
+            <button class="button" id="plus" onclick="append('+')">+</button>
+            <button class="button" id="dot" onclick="append('.')">.</button>
+            <button class="button" id="0" onclick="append('0')">0</button>
+            <button class="button" id="Ans"></button>
+            <button class="button" id="eq" onclick="calculate()">=</button>
+        </div>
+    </div>
+
+    <script>
+        function append(value) {
+            const textbox = document.getElementById("textbox");
+            const currentValue = textbox.value;
+
+            if (!['+', '=', '.', '/', '*', '%', '-'].includes(currentValue.slice(-1)) || !['+', '=', '.', '/', '*', '%', '-'].includes(value)) {
+                textbox.value += value;
+            }
+        }
+
+        function clearDisplay() {
+            document.getElementById("textbox").value = "";
+        }
+
+        function backspace() {
+            let currentValue = document.getElementById("textbox").value;
+            document.getElementById("textbox").value = currentValue.slice(0, -1);
+        }
+
+        function calculate() {
+            let expression = document.getElementById("textbox").value;
+            try {
+                document.getElementById("textbox").value = eval(expression);
+            } catch (error) {
+                document.getElementById("textbox").value = "Error";
+            }
+        }
+    </script>
+</body>
+</html>
