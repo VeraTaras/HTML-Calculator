@@ -19,7 +19,7 @@ This calculator project is a basic web application built with HTML, CSS, and Jav
 
 ## Demo
 
-You can view a live demo of the calculator [here][(https://verataras.github.io/HTML-Calculator/).
+You can view a live demo of the calculator [here](https://verataras.github.io/HTML-Calculator/).
 
 ## Screenshots
 
