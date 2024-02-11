@@ -23,9 +23,7 @@ You can view a live demo of the calculator [here](https://verataras.github.io/HT
 
 ## Screenshots
 
-## Demo
-
-![Calculator Screenshot](https://github.com/your-username/calculator/raw/main/screenshots/calculator.png)
+![Calculator Screenshot](https://github.com/VeraTaras/HTML-Calculator/blob/main/project.png)
 
 ## Usage
 
