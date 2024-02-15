@@ -23,11 +23,11 @@ You can view a live demo of the calculator [here](https://verataras.github.io/HT
 
 ## Screenshots
 
-![Calculator Screenshot](https://github.com/VeraTaras/HTML-Calculator.git)
+![Calculator Screenshot]()
 
 ## Usage
 
 1. Clone the repository:
 
    ```bash
-   git clone https://verataras.github.io/HTML-Calculator/
+   git clone https://github.com/VeraTaras/HTML-Calculator.git
